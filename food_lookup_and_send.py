@@ -31,8 +31,8 @@ from PIL import Image
 import tflite_runtime.interpreter as tflite
 
 # ---------------------- Configuration ----------------------
-TFLITE_MODEL_PATH = "./model_output/food_classifier.tflite"
-CLASS_INDICES_PATH = "./model_output/class_indices.json"
+TFLITE_MODEL_PATH = "./food_classifier.tflite"      # from model_output_finetuned/
+CLASS_INDICES_PATH = "./class_indices.json"          # from model_output_finetuned/
 FOOD_DB_PATH = "./food_storage_db.json"
 
 BLYNK_AUTH_TOKEN = "KGAT_e2bc4a074b3e3820363df6ec98be59d4"   # Same token as in the ESP32 sketch
