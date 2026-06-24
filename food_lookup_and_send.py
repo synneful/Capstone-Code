@@ -35,7 +35,7 @@ TFLITE_MODEL_PATH = "./model_output/food_classifier.tflite"
 CLASS_INDICES_PATH = "./model_output/class_indices.json"
 FOOD_DB_PATH = "./food_storage_db.json"
 
-BLYNK_AUTH_TOKEN = "Hef6kq-IukqIiRkCpR-AHZ5ImXOVsAVW"   # Same token as in the ESP32 sketch
+BLYNK_AUTH_TOKEN = "KGAT_e2bc4a074b3e3820363df6ec98be59d4"   # Same token as in the ESP32 sketch
 BLYNK_SERVER = "https://blynk.cloud/external/api/update"
 
 IMG_SIZE = (224, 224)
