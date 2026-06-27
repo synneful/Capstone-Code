@@ -27,8 +27,12 @@ import numpy as np
 import requests
 from PIL import Image
 
-# TFLite runtime - lightweight, no need for full TensorFlow on-device
-import tflite_runtime.interpreter as tflite
+# tflite_runtime has no Windows wheels on PyPI, so we fall back to
+# TensorFlow's built-in interpreter (same API, works everywhere TF does).
+try:
+    import tflite_runtime.interpreter as tflite
+except ImportError:
+    import tensorflow.lite as tflite
 
 # ---------------------- Configuration ----------------------
 TFLITE_MODEL_PATH = "./food_classifier.tflite"      # from model_output_finetuned/
