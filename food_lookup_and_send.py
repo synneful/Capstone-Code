@@ -39,7 +39,7 @@ TFLITE_MODEL_PATH = "./food_classifier.tflite"      # from model_output_finetune
 CLASS_INDICES_PATH = "./class_indices.json"          # from model_output_finetuned/
 FOOD_DB_PATH = "./food_storage_db.json"
 
-BLYNK_AUTH_TOKEN = "KGAT_e2bc4a074b3e3820363df6ec98be59d4"   # Same token as in the ESP32 sketch
+BLYNK_AUTH_TOKEN = "Hef6kq-IukqIiRkCpR-AHZ5ImXOVsAVW"   # Same token as in the ESP32 sketch
 BLYNK_SERVER = "https://blynk.cloud/external/api/update"
 
 IMG_SIZE = (224, 224)
@@ -48,8 +48,9 @@ IMG_SIZE = (224, 224)
 def load_class_map(path):
     with open(path, "r") as f:
         class_indices = json.load(f)
-    # Invert: {0: "apple", 1: "lettuce", ...}
-    return {v: k for k, v in class_indices.items()}
+    # class_indices.json is already {"0": "apple_pie", "1": ...} (index -> name).
+    # JSON keys are always strings, so just convert the key back to int.
+    return {int(k): v for k, v in class_indices.items()}
 
 
 def preprocess_image(image_path):
