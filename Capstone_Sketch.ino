@@ -23,9 +23,9 @@
   ===================================================================
 */
 
-#define BLYNK_TEMPLATE_ID "TMPL6EYrBb1Kv"
+#define BLYNK_TEMPLATE_ID "Your Template ID Here"
 #define BLYNK_TEMPLATE_NAME "Freshguard AI"
-#define BLYNK_AUTH_TOKEN "Hef6kq-IukqIiRkCpR-AHZ5ImXOVsAVW"
+#define BLYNK_AUTH_TOKEN "Your Auth Token Here"
 
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
